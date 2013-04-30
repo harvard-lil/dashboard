@@ -1,0 +1,43 @@
+/*/Overwriting bootstripped navigation/*/
+body {
+	margin:0;
+}
+
+.container {
+	margin-top:20px;
+}
+
+.nav {
+	margin-top:0px;
+}
+
+.nav > li > a {
+	-webkit-transition:background 80ms linear;
+   	-moz-transition:background 80ms linear;
+   	-o-transition:background 80ms linear;
+   	transition:background 80ms linear;
+  	text-align:center;
+	margin: 0 auto 9px;
+	padding: 9px 0;
+	background:#09f;
+	color:white;
+	display:block;
+	font-weight: bold;
+	font-size:18px;
+}
+
+.nav > li > a:hover {
+  	text-decoration: none;
+  	color:#fff;
+  	background-color: #0085dd;
+}
+
+.nav > li.active a {
+  	text-decoration: none;
+  	color:#ff0;
+  	background-color: #0085dd;
+}
+
+.mod {
+    border: 1px;
+}
