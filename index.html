@@ -7,17 +7,32 @@
 
   </head>
   <body>
-    <div id="github-module">
+    <div id="dashboard">
+      <div id="scrum_cam">
+
+      </div>
+      <div id="github-module" class="mod">
+        <div id="recent-activity">
+          <h3>Our Recent Activity</h3>
+        </div>
+        <div id="github-activity">
+        </div>
+      </div>
+    </div>
+    <div id="content">
+      CONTENT
+    </div>
+    <div id="shoe_cam">
     </div>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <script id="action" class="mod" type="text/html">
-      <div>
-        {{ name }} {{ activity }} {{ repo }}
+      <div class="action">
+        {{ name }} {{ activity }} <a href="{{ repo_url }}">{{ repo }}</a>
       </div>
     </script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="js/ICanHaz.min.js"></script>
-    <script type="text/javascript" src="./dash.js"></script>
+    <script type="text/javascript" src="js/dash.js"></script>
   </body>
 </html>

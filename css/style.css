@@ -39,5 +39,57 @@ body {
 }
 
 .mod {
-    border: 1px;
+     height: 296px;
+     width: 330px;
+     overflow: hidden;
+     box-sizing: border-box;
+     border-radius: 3px;
+     border: 1px solid #ddd;
+     background-color: #fff;
+     margin-bottom: 20px;
+     border-bottom: 0px;
+}
+
+#github-activity {
+     overflow: scroll;
+}
+
+#github-module {
+     float: right;
+}
+
+.action {
+     margin: 0;
+     border-top-left-radius: 3px;
+     border-top-right-radius: 3px;
+     border-bottom: 1px solid #ddd;
+     padding: 10px;
+     line-height: 100%;
+}
+
+#recent-activity {
+     margin: 0;
+     border-top-left-radius: 3px;
+     border-top-right-radius: 3px;
+     border-bottom: 1px solid #ddd;
+     padding: 10px;
+     line-height: 100%;
+     background: #f7f7f7;
+}
+
+.action > a {
+     color: #0085dd;
+     font-weight: bold;
+}
+
+#content {
+     box-sizing: border-box;
+     border-radius: 3px;
+     border: 1px solid #ddd;
+     text-align: center;
+}
+
+#dashboard {
+     clear: both;
+     height: 310px;
 }
