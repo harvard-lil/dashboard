@@ -8,7 +8,7 @@
   }
   var org = 'harvard-lil'
   var container = $("#github-activity");
-  var data = $.getJSON('https://api.github.com/orgs/' + org + '/events', function(data){
+  var data = $.getJSON('http://localhost:8888/github', function(data){
     $.each(data, function(){
       var dict = {
         name : this.actor.login,

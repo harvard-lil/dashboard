@@ -48,12 +48,12 @@ body {
      border: 1px solid #ddd;
      background-color: #fff;
      margin-bottom: 20px;
-     border-bottom: 0px;
      margin-left: 10px;
 }
 
 #github-activity {
      overflow: scroll;
+     height : 260px;
 }
 
 #github-module {
