@@ -39,6 +39,7 @@ body {
 }
 
 .mod {
+     float: left;
      height: 296px;
      width: 330px;
      overflow: hidden;
@@ -48,6 +49,7 @@ body {
      background-color: #fff;
      margin-bottom: 20px;
      border-bottom: 0px;
+     margin-left: 10px;
 }
 
 #github-activity {
@@ -55,7 +57,13 @@ body {
 }
 
 #github-module {
-     float: right;
+
+}
+
+#analytics {
+     border-radius: 3px;
+     border: 1px solid #ddd;
+     text-align: center;
 }
 
 .action {
@@ -83,13 +91,28 @@ body {
 }
 
 #content {
+     width: 100%;
+     height: 400px;
      box-sizing: border-box;
      border-radius: 3px;
      border: 1px solid #ddd;
      text-align: center;
+     margin-left: 10px;
 }
 
 #dashboard {
      clear: both;
-     height: 310px;
+     height: 490px;
+     width: 100%;
+}
+
+.cam {
+     width: 100%;
+     height: auto;
+     text-align: center;
+     border: 1px solid #0085dd;
+}
+
+.row {
+     margin-left: 0px;
 }
