@@ -18,7 +18,10 @@ class GitHubHandler(tornado.web.RequestHandler):
             "client_secret" : config.GH_SECRET
             }
         response = get("https://api.github.com/orgs/" + ORG + "/events", params=args)
-        self.write(response.text)
+        if response.status_code == 200:
+            self.write(response.text)
+        else:
+            raise Exception("Github error.")
 
 class AnalyticsHandler(tornado.web.RequestHandler):
     def get(self):
