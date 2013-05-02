@@ -44,6 +44,7 @@ define([], function() {
       dict.item_url = "https://github.com/" + event.repo.name + (payload.ref === null ? "" : "/tree/" + payload.ref)
       dict.post_action = "at"
       dict.description = payload.description;
+      dict.img = payload.ref === null ? "new_repo" : "fork_repo";
       break;
     case "DeleteEvent":
       // Deleted a branch or a tag.
@@ -61,7 +62,6 @@ define([], function() {
       dict.item_url = payload.forkee.html_url;
       dict.post_action = "";
       dict.description = payload.description;
-      console.log("ForkEvent not yet implemented");
       break;
     case "ForkApplyEvent":
       console.log("ForkApplyEvent not yet implemented");
@@ -81,8 +81,7 @@ define([], function() {
       dict.item_url = payload.issue.html_url;
       dict.post_action = "on";
       dict.descriptionn = payload.issue.title;
-      dict.img = "";
-      console.log("IssuesEvent not yet implemented");
+      dict.img = undefined;
       break;
     case "MemberEvent":
       dict.pre_action = "";
@@ -108,6 +107,7 @@ define([], function() {
       dict.item_url = "https://github.com/" + event.repo.name + "/commits/" + payload.commits[0].sha;
       dict.post_action = "to";
       dict.description = payload.commits[0].message;
+      dict.img = "push_repo";
       break;
     case "TeamAddEvent":
       // This might need 4 links;

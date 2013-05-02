@@ -4,6 +4,9 @@ require(["eventcat"], function(cat) {
   var data = $.getJSON('http://localhost:8888/github', function(data){
     $.each(data, function(){
       var dict = cat.sentence_dict(this);
+      if (dict.img === undefined) {
+        dict.img = "github";
+      }
       var activity = ich.activity(dict);
       container.append(activity);
       });
