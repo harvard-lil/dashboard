@@ -106,6 +106,7 @@ body {
 .activity > a.item:hover {
      color: #0085dd;
      font-weight: bold;
+     background-color: #fff;
 }
 
 .activity > a {

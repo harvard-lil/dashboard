@@ -30,6 +30,7 @@ class AnalyticsHandler(tornado.web.RequestHandler):
 application = tornado.web.Application([
     (r"/analytics", AnalyticsHandler),
     (r"/github", GitHubHandler),
+    (r"/events/(.*)", tornado.web.StaticFileHandler, {'path' : '../../eventcat'}),
     (r"/(.*)", tornado.web.StaticFileHandler, {'path' : '../'}),
 ])
 
