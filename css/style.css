@@ -135,12 +135,17 @@ body {
      border: 1px solid #0085dd;
 }
 
+#scrum_graph {
+     border: 0px;
+}
+
 .row {
      margin-left: 0px;
 }
 
 #scrum-graph {
      height : 20px;
+     overflow-x: scroll;
 }
 
 .chart div {
@@ -150,4 +155,13 @@ body {
   padding: 3px;
   margin: 1px;
   color: white;
+}
+
+.day {
+  fill: #fff;
+  stroke: #ccc;
+  width : 10px;
+  height : 10px;
+  float : left;
+  margin: 5px;
 }
