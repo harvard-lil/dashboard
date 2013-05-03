@@ -80,26 +80,17 @@ body {
      border-top-left-radius: 3px;
      border-top-right-radius: 3px;
      border-bottom: 1px solid #ddd;
-     padding: 10px;
+     padding: 6px;
      line-height: 100%;
      background: #f7f7f7;
 }
 
-<<<<<<< HEAD
-.action > a {
-=======
 #recent-activity > h3 {
      font-size: 10pt;
 }
-<<<<<<< HEAD
-.activity > a.action {
->>>>>>> 6178169... Checkpoint.
-     color: #0085dd;
-=======
 .activity > a.item {
      color: #fff;
      background-color: #0085dd;
->>>>>>> 235681b... Only soem github events work now, checkpoint.
      font-weight: bold;
 }
 
@@ -132,8 +123,9 @@ body {
 
 #dashboard {
      clear: both;
-     height: 490px;
+     height: 540px;
      width: 100%;
+     min-width: 1020px;
 }
 
 .cam {
@@ -145,4 +137,17 @@ body {
 
 .row {
      margin-left: 0px;
+}
+
+#scrum-graph {
+     height : 20px;
+}
+
+.chart div {
+  font: 10px sans-serif;
+  background-color: steelblue;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
 }

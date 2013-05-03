@@ -11,4 +11,9 @@ require(["eventcat"], function(cat) {
       container.append(activity);
       });
   });
+
+  var scrum_data = [0, 0, 0, 1, 2, 3, 4, 5, 5, 5, 0];
+
+  // D3 stuff.
+  d3.select("#scrum_graph").text("New paragraph!");
 });
