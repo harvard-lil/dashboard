@@ -16,17 +16,25 @@
       </div>
       <div class="row">
         <div id="analytics" class="mod">
-          ANALYTICS
+          <div id="title">
+            <h3>Analytics</h3>
+          </div>
+          <div id="analytic-activity" class="activity_box">
+          </div>
         </div>
         <div id="github-module" class="mod">
-          <div id="recent-activity">
+          <div id="title">
             <h3>Recent Activity</h3>
           </div>
-          <div id="github-activity">
+          <div id="github-activity" class="activity_box">
           </div>
         </div>
         <div id="awesome-box" class="mod">
-          AWESOME BOX/SHELFLIFE
+          <div id="title">
+            <h3>Recently Read</h3>
+          </div>
+          <div id="book_activity" class="activity_box">
+          </div>
         </div>
       </div>
     </div>
@@ -42,6 +50,11 @@
     <script id="activity" class="mod" type="text/html">
       <div class="activity">
         <img src="img/octicons/{{ img }}.png"></img> <a href="https://github.com/{{ user }}">{{ user }}</a>{{ pre_action }}<a href="{{ item_url }}" class="item">{{ item }}</a>{{ post_action }}<a href="https://github.com/{{ repo }}">{{ repo }}</a>
+      </div>
+    </script>
+    <script id="analytic" class="mod" type="text/html">
+      <div class="analytic">
+        {{ name }} <a class="count">{{ count }}</a>
       </div>
     </script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>

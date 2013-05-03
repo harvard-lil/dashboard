@@ -25,7 +25,11 @@ class GitHubHandler(tornado.web.RequestHandler):
         else:
             raise Exception("Github error.")
 
-
+class ScrumHandler(tornado.web.RequestHandler):
+    # This could send the scrum/shoe urls...or not.
+    def get(self):
+        data = {
+        }
 
 class AnalyticsHandler(tornado.web.RequestHandler):
     def get(self):
