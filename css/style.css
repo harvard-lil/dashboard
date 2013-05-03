@@ -143,9 +143,12 @@ body {
      margin-left: 0px;
 }
 
-#scrum-graph {
+#scrum_graph {
      height : 20px;
      overflow-x: scroll;
+     margin: 0px;
+     margin-top: -20px;
+     background:rgba(255,255,255,0.2);
 }
 
 .chart div {
@@ -164,4 +167,5 @@ body {
   height : 10px;
   float : left;
   margin: 5px;
+  border-radius: 5px;
 }
