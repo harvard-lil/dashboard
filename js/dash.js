@@ -14,7 +14,7 @@ require(["eventcat"], function(cat) {
   });
 
   // D3 stuff.
-  var scrum_data = [0, 0, 0, 1, 2, 3, 4, 5, 5, 5, 0,3,4, 5, 2, 5, 3, 4, 2, 4, 1, 1, 1, 5, 4, 3, 4, 3, 4, 4, 4, 5, 5, 5, 2, 3, 2, 2, 2, 4, 4, 3, 2, 5, 4, 3, 2];
+  var scrum_data = [2, 2, 0, 1, 2, 3, 4, 5, 5, 5, 0, 3, 4, 5, 2, 5, 3, 4, 2, 4, 1, 1, 1, 5, 4, 3, 4, 3, 4, 4, 4, 5, 5, 5, 2, 3, 2, 2, 2, 4, 4, 3, 2, 5, 4, 3, 2, 2, 4, 4, 3, 3, 4, 5, 3, 3, 2, 4, 5, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 2, 2, 0, 1, 2, 3, 4, 5, 5, 5, 0, 3, 4, 5, 2, 5, 3, 4, 2, 4, 1, 1, 1, 5, 4, 3, 4, 3, 4, 4, 4, 5, 5, 5, 2, 3, 2, 2, 2, 4, 4, 3, 2, 5, 4, 3, 2, 2, 4, 4, 3, 3, 4, 5, 3, 3, 2, 4, 5, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4];
 
   // We could generate this programatically if needed.
   // I assume a 1 person scrum should probably count as much as a 0 person scrum.
@@ -27,6 +27,8 @@ require(["eventcat"], function(cat) {
     4 : "#4044a3",
     5 : "#231e68"
   };
+
+  $("#scrum_graph").width(scrum_data.length * 18);
 
   d3.select("#scrum_graph").selectAll("div")
     .data(scrum_data)
@@ -51,4 +53,5 @@ require(["eventcat"], function(cat) {
       }
     })
   });
+  $("#graph_wrapper").scrollLeft($("#scrum_graph").width());
 });

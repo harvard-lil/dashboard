@@ -145,10 +145,10 @@ body {
 
 #scrum_graph {
      height : 20px;
-     overflow-x: scroll;
+     overflow : visible;
      margin: 0px;
-     margin-top: -20px;
      background:rgba(255,255,255,0.2);
+     width: 0px;
 }
 
 .chart div {
@@ -173,6 +173,10 @@ body {
 #graph_wrapper {
     overflow-x: scroll;
     width: 100%;
+    z-index:-1;
+    height: 20px;
+    margin-top: -20px;
+    display: inline-block;
 }
 
 .count {
