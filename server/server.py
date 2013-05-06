@@ -11,7 +11,7 @@ import config
 import util
 
 ORG = 'harvard-lil'
-TABLE_ID = ''
+TABLE_ID = config.G_TABLE_ID
 
 class GitHubHandler(tornado.web.RequestHandler):
     def get(self):
