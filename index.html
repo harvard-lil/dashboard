@@ -3,41 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>The Harvard Library Innovation Lab</title>
-
-
   </head>
   <body>
     <div id="dashboard">
-      <div id="scrum_cam" class="mod cam">
-        SCRUM CAM
-      </div>
-      <div class="row">
-        <div id="analytics" class="mod">
-          <div id="title">
-            <h3>Analytics</h3>
-          </div>
-          <div id="analytic-activity" class="activity_box">
-          </div>
-        </div>
-        <div id="github-module" class="mod">
-          <div id="title">
-            <h3>Recent Activity</h3>
-          </div>
-          <div id="github-activity" class="activity_box">
-          </div>
-        </div>
-        <div id="awesome-box" class="mod">
-          <div id="title">
-            <h3>Recently Read</h3>
-          </div>
-          <div id="book_activity" class="activity_box">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="content">
-      PAGE CONTENT
-    </div>
     <div id="shoe_cam" class="mod cam">
       <div id="graph_wrapper" class="">
         <div id="scrum_graph" class="mod cam">
@@ -45,6 +13,34 @@
       </div>
       <img id="shoe_cam_image" src="img/shoe_cam.jpeg" alt="Shoes!">
     </div>
+      <div class="row">
+      	<div id="blog" class="mod">
+          <div id="title">
+            <h3>Blog</h3>
+          </div>
+          <div id="blog_rank" class="activity_box">
+          </div>
+        </div>
+       
+        <div id="github-module" class="mod">
+          <div id="title">
+            <h3>Recent Activity</h3>
+          </div>
+          <div id="github-activity" class="activity_box">
+          </div>
+        </div>
+         <div id="analytics" class="mod">
+          <div id="title">
+            <h3>Analytics</h3>
+          </div>
+          <div id="analytic-activity" class="activity_box">
+          </div>
+        </div>
+      </div>
+    </div>
+   <!-- <div id="content">
+      PAGE CONTENT
+    </div> -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <script id="activity" class="mod" type="text/html">
@@ -53,7 +49,7 @@
       </div>
     </script>
     <script id="analytic" class="mod" type="text/html">
-      <div class="analytic">
+      <div class="analytic activity">
         {{ name }} <a class="count">{{ count }}</a>
       </div>
     </script>

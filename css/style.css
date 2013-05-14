@@ -63,7 +63,7 @@ body {
 #analytics {
      border-radius: 3px;
      border: 1px solid #ddd;
-     text-align: center;
+     
 }
 
 .activity {
@@ -92,12 +92,13 @@ body {
      color: #fff;
      background-color: #0085dd;
      font-weight: bold;
+      border-radius: 3px;
+     padding:1px 3px;
 }
 
 .activity > a.item:hover {
-     color: #0085dd;
-     font-weight: bold;
-     background-color: #fff;
+     color: #fff;
+     background-color: #005288;
 }
 
 .activity > a {
@@ -106,8 +107,7 @@ body {
 }
 
 .activity > a:hover {
-     color: #fff;
-     background-color: #0085dd;
+     color:#005288;
      font-weight: bold;
 }
 
@@ -139,7 +139,7 @@ body {
 }
 
 #shoe_cam_image {
-    margin-top:-20px;
+    margin-top:-80px;
 }
 
 #scrum_graph {
@@ -151,10 +151,10 @@ body {
 }
 
 #scrum_graph {
-     height : 20px;
+     height : 40px;
      overflow : visible;
      margin: 0px;
-     background:rgba(255,255,255,0.2);
+     background:rgba(255,255,255,0.0);
      width: 0px;
 }
 
@@ -170,22 +170,25 @@ body {
 .day {
   fill: #fff;
   stroke: #ccc;
-  width: 10px;
-  height: 10px;
+  width: 30px;
+  height: 30px;
   float: left;
   margin: 4px;
-  border-radius: 4px;
+  border-radius: 30px;
 }
 
 #graph_wrapper {
     overflow-x: scroll;
     width: 100%;
     z-index:-1;
-    height: 20px;
+    height: 40px;
 }
 
-.count {
-     color: #0085dd;
+.activity > a.count {
+    color: #fff;
+     background-color: #0085dd;
      font-weight: bold;
-     background-color: #fff;
+      border-radius: 3px;
+     padding:1px 3px;
+     margin-left:3px;
 }

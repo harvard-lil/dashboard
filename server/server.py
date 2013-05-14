@@ -13,6 +13,17 @@ import util
 ORG = 'harvard-lil'
 TABLE_ID = config.G_TABLE_ID
 
+class BlogHandler(tornado.web.RequestHandler):
+    def get(self):
+        response = get("http://librarylab.law.harvard.edu/blog/dashboard.php")
+        ranked = response.json()
+        # Wrap this.
+        # Wordpress always returns a 404 for some reason...
+        #if response.status_code == 200:
+        self.write(response.text)
+        #else:
+        #    raise Exception("Wordpress error.")
+
 class GitHubHandler(tornado.web.RequestHandler):
     def get(self):
         args = {
@@ -57,6 +68,7 @@ class AnalyticsHandler(tornado.web.RequestHandler):
 
 application = tornado.web.Application([
     (r"/analytics", AnalyticsHandler),
+    (r"/blog", BlogHandler),
     (r"/github", GitHubHandler),
     (r"/events/(.*)", tornado.web.StaticFileHandler, {'path' : '../../eventcat'}),
     (r"/(.*)", tornado.web.StaticFileHandler, {'path' : '../'}),

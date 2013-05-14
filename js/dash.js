@@ -54,4 +54,12 @@ require(["eventcat"], function(cat) {
     })
   });
   $("#graph_wrapper").scrollLeft($("#scrum_graph").width());
+
+  // Blog stuff.
+  var blog_container = $("#blog_rank");
+  var data = $.getJSON('http://localhost:8888/blog', function(data){
+    for (var key in data) {
+      blog_container.append('<div class="activity">' + key + '<div>');
+    }
+  });
 });
