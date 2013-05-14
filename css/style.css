@@ -63,7 +63,7 @@ body {
 #analytics {
      border-radius: 3px;
      border: 1px solid #ddd;
-     
+
 }
 
 .activity {
@@ -155,7 +155,7 @@ body {
      overflow : visible;
      margin: 0px;
      background:rgba(255,255,255,0.0);
-     width: 0px;
+     width: auto;
 }
 
 .chart div {

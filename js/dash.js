@@ -13,9 +13,6 @@ require(["eventcat"], function(cat) {
       });
   });
 
-  // D3 stuff.
-  var scrum_data = [2, 2, 0, 1, 2, 3, 4, 5, 5, 5, 0, 3, 4, 5, 2, 5, 3, 4, 2, 4, 1, 1, 1, 5, 4, 3, 4, 3, 4, 4, 4, 5, 5, 5, 2, 3, 2, 2, 2, 4, 4, 3, 2, 5, 4, 3, 2, 2, 4, 4, 3, 3, 4, 5, 3, 3, 2, 4, 5, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 2, 2, 0, 1, 2, 3, 4, 5, 5, 5, 0, 3, 4, 5, 2, 5, 3, 4, 2, 4];
-
   // We could generate this programatically if needed.
   // I assume a 1 person scrum should probably count as much as a 0 person scrum.
   // Curently these colors are just shuffled versions of the github colors.
@@ -28,16 +25,22 @@ require(["eventcat"], function(cat) {
     5 : "#231e68"
   };
 
-  $("#scrum_graph").width(scrum_data.length * 18);
 
-  d3.select("#scrum_graph").selectAll("div")
-    .data(scrum_data)
-    .enter()
-    .append("div")
-    .attr("class", "day")
-    .style("background-color", function(d) {
-      return color_map[d];
-    });
+  // D3 stuff.
+  var scrum_data = $.getJSON('http://localhost:8888/scrum', function(data){
+    $("#scrum_graph").width(scrum_data.length * 18);
+
+    d3.select("#scrum_graph").selectAll("div")
+      .data(data)
+      .enter()
+      .append("div")
+      .attr("class", "day")
+      .style("background-color", function(d) {
+        console.log(d);
+        return color_map[d.count];
+      });
+
+  });
 
   // Analytics stuff.
   var ana_container = $("#analytic-activity");
