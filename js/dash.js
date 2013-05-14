@@ -2,7 +2,7 @@ require(["eventcat"], function(cat) {
   // Github stuff.
   var org = 'harvard-lil'
   var container = $("#github-activity");
-  var data = $.getJSON('http://localhost:8888/github', function(data){
+  var data = $.getJSON('/github', function(data){
     $.each(data, function(){
       var dict = cat.sentence_dict(this);
       if (dict.img === undefined) {
@@ -28,7 +28,7 @@ require(["eventcat"], function(cat) {
 
 
   // D3 stuff.
-  var scrum_data = $.getJSON('http://localhost:8888/scrum', function(data){
+  var scrum_data = $.getJSON('/scrum', function(data){
     $("#scrum_graph").width(scrum_data.length * 18);
 
     d3.select("#scrum_graph").selectAll("div")
@@ -45,7 +45,7 @@ require(["eventcat"], function(cat) {
 
   // Analytics stuff.
   var ana_container = $("#analytic-activity");
-  var data = $.getJSON('http://localhost:8888/analytics', function(data){
+  var data = $.getJSON('/analytics', function(data){
     $.each(data.rows, function(){
       if (this[1] !== "(not provided)") {
         var dict = {
@@ -61,7 +61,7 @@ require(["eventcat"], function(cat) {
 
   // Blog stuff.
   var blog_container = $("#blog_rank");
-  var data = $.getJSON('http://localhost:8888/blog', function(data){
+  var data = $.getJSON('/blog', function(data){
     for (var key in data) {
       blog_container.append('<div class="activity">' + key + '<div>');
     }
