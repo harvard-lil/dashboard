@@ -11,6 +11,7 @@ require(["eventcat"], function(cat) {
       var activity = ich.activity(dict);
       container.append(activity);
       });
+    $("a:empty").hide();
   });
 
   // We could generate this programatically if needed.
