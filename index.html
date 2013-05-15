@@ -11,7 +11,12 @@
         <div id="scrum_graph" class="mod cam">
         </div>
       </div>
-      <img id="shoe_cam_image" src="img/shoe_cam.jpeg" alt="Shoes!">
+      <div id="shoe_pic">
+      </div>
+      <img id="shoe_cam_image" alt="Shoes!">
+      <div id="caption">
+      </div>
+ <!--     <img id="shoe_cam_image" src="img/shoe_cam.jpeg" alt="Shoes!"> -->
     </div>
       <div class="row">
       	<div id="blog" class="mod">
@@ -21,7 +26,7 @@
           <div id="blog_rank" class="activity_box">
           </div>
         </div>
-       
+
         <div id="github-module" class="mod">
           <div id="title">
             <h3>Recent Activity</h3>
@@ -48,6 +53,15 @@
         <img src="img/octicons/{{ img }}.png"></img> <a href="https://github.com/{{ user }}">{{ user }}</a>{{ pre_action }}<a href="{{ item_url }}" class="item">{{ item }}</a>{{ post_action }}<a href="https://github.com/{{ repo }}">{{ repo }}</a>
       </div>
     </script>
+
+    <script id="scrum_cap" type="text/html">
+      <div class="cap_text">
+        Date: {{ date_text }}
+        <br>
+        Present: {{ count }}
+      </div>
+    </script>
+
     <script id="analytic" class="mod" type="text/html">
       <div class="analytic activity">
         {{ name }} <a class="count">{{ count }}</a>

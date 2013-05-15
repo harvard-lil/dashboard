@@ -31,15 +31,50 @@ require(["eventcat"], function(cat) {
   var scrum_data = $.getJSON('/scrum', function(data){
     $("#scrum_graph").width(scrum_data.length * 18);
 
+    // Tuesday : 2
+    // Thursday : 4
+
+    var last_scrum = data[data.length - 1];
+    var last_date = last_scrum.date;
+    last_scrum.date_text = new Date(last_scrum.date * 1000).toDateString()
+
+    var last_cap = ich.scrum_cap(last_scrum);
+
+    var pic = $("#shoe_cam_image");
+    var cap = $("#caption");
+
+    cap.html(last_cap);
+    pic.attr("src", "img/shoe_cam/" + last_date + ".jpg");
+
     d3.select("#scrum_graph").selectAll("div")
       .data(data)
       .enter()
       .append("div")
       .attr("class", "day")
-      .style("background-color", function(d) {
-        console.log(d);
+      .style("background-color", function(d, i) {
         return color_map[d.count];
-      });
+      })
+      .style("margin-left", function(d, i) {
+        var date = new Date(d.date * 1000);
+        var day = date.getDay();
+        if (day === 2) {
+          return "20px";
+        }
+        else {
+          return "0px";
+        }
+      })
+      .on("mouseover", function(d){
+        pic.attr("src", "img/shoe_cam/" + d.date + ".jpg");
+        d.date_text = new Date(d.date * 1000).toDateString();
+        var cur_cap = ich.scrum_cap(d);
+        console.log(cur_cap);
+        cap.html(cur_cap);
+      })
+    .on("mouseleave", function(d){
+        pic.attr("src", "img/shoe_cam/" + last_date + ".jpg");
+      cap.html(last_cap);
+    });
 
   });
 

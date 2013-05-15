@@ -74,11 +74,11 @@ class ScrumHandler(tornado.web.RequestHandler):
         data = [
             {
                 "date" : timestamp(2013, 2, 26),
-                "count" : 4,
+                "count" : 3,
             },
             {
                 "date" : timestamp(2013, 2, 28),
-                "count" : 4,
+                "count" : 5,
             },
             {
                 "date" : timestamp(2013, 3, 5),
@@ -86,23 +86,23 @@ class ScrumHandler(tornado.web.RequestHandler):
             },
             {
                 "date" : timestamp(2013, 3, 7),
-                "count" : 4,
+                "count" : 3,
             },
             {
                 "date" : timestamp(2013, 3, 12),
-                "count" : 4,
+                "count" : 2,
             },
             {
                 "date" : timestamp(2013, 3, 14),
-                "count" : 4,
+                "count" : 3,
             },
             {
                 "date" : timestamp(2013, 3, 19),
-                "count" : 4,
+                "count" : 2,
             },
             {
                 "date" : timestamp(2013, 3, 21),
-                "count" : 4,
+                "count" : 1,
             },
             {
                 "date" : timestamp(2013, 3, 26),
@@ -110,7 +110,7 @@ class ScrumHandler(tornado.web.RequestHandler):
             },
             {
                 "date" : timestamp(2013, 3, 28),
-                "count" : 4,
+                "count" : 5,
             },
             {
                 "date" : timestamp(2013, 4, 2),
@@ -118,27 +118,27 @@ class ScrumHandler(tornado.web.RequestHandler):
             },
             {
                 "date" : timestamp(2013, 4, 4),
-                "count" : 4,
+                "count" : 2,
             },
             {
                 "date" : timestamp(2013, 4, 9),
-                "count" : 4,
+                "count" : 3,
             },
             {
                 "date" : timestamp(2013, 4, 11),
-                "count" : 4,
+                "count" : 5,
             },
             {
                 "date" : timestamp(2013, 4, 16),
-                "count" : 4,
+                "count" : 5,
             },
             {
                 "date" : timestamp(2013, 4, 18),
-                "count" : 4,
+                "count" : 3,
             },
             {
                 "date" : timestamp(2013, 4, 23),
-                "count" : 4,
+                "count" : 0,
             },
             {
                 "date" : timestamp(2013, 4, 25),
@@ -146,7 +146,7 @@ class ScrumHandler(tornado.web.RequestHandler):
             },
             {
                 "date" : timestamp(2013, 4, 30),
-                "count" : 4,
+                "count" : 3,
             },
             {
                 "date" : timestamp(2013, 5, 2),
@@ -154,19 +154,19 @@ class ScrumHandler(tornado.web.RequestHandler):
             },
             {
                 "date" : timestamp(2013, 5, 7),
-                "count" : 4,
+                "count" : 2,
             },
             {
                 "date" : timestamp(2013, 5, 9),
-                "count" : 4,
+                "count" : 3,
             },
             {
                 "date" : timestamp(2013, 5, 14),
-                "count" : 4,
+                "count" : 2,
             },
             {
                 "date" : timestamp(2013, 5, 16),
-                "count" : 4,
+                "count" : 2,
             },
         ]
         self.write(json.dumps(data))
@@ -181,5 +181,5 @@ application = tornado.web.Application([
 ])
 
 if __name__ == "__main__":
-    application.listen(80, address='0.0.0.0')
+    application.listen(8888, address='0.0.0.0')
     tornado.ioloop.IOLoop.instance().start()
