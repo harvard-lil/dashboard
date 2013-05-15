@@ -83,15 +83,19 @@ require(["eventcat"], function(cat) {
     $.each(data.rows, function(){
       if (this[1] !== "(not provided)") {
         var dict = {
-          url : this[2],
-          path : this[3],
-          name : this[1],
-          count : this[4]
+          url : this[0],
+          path : this[1],
+          name : this[2],
+          count : this[3]
         };
         var analytic = ich.analytic(dict);
         ana_container.append(analytic);
       }
-    })
+    });
+    var start_date = data.query['start-date'];
+    var end_date = data.query['end-date'];
+    console.log(start_date);
+    console.log(end_date);
   });
   $("#graph_wrapper").scrollLeft($("#scrum_graph").width());
 

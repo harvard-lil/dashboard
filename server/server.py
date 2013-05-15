@@ -14,19 +14,27 @@ from oauth2client.client import AccessTokenRefreshError
 import config
 import util
 
+import datetime
+import time
+
 ORG = 'harvard-lil'
 TABLE_ID = config.G_TABLE_ID
+
+def google_date(timestamp):
+    return datetime.datetime.fromtimestamp(timestamp).strftime('%Y-%m-%d')
 
 class AnalyticsHandler(tornado.web.RequestHandler):
     def get(self):
         service = util.initialize_service()
         try:
+            # 30 days = 2592000 seconds.
+            now = time.time()
             results = service.data().ga().get(
                 ids=TABLE_ID,
-                start_date='2012-01-01',
-                end_date='2013-05-02',
+                start_date=google_date(now - 2592000),
+                end_date=google_date(now),
                 metrics='ga:visits',
-                dimensions='ga:source,ga:keyword,ga:hostname,ga:pagePath',
+                dimensions='ga:hostname,ga:pagePath,ga:pageTitle',
                 sort='-ga:visits',
                 filters='ga:medium==organic',
                 start_index='1',
