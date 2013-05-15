@@ -68,7 +68,6 @@ require(["eventcat"], function(cat) {
         pic.attr("src", "img/shoe_cam/" + d.date + ".jpg");
         d.date_text = new Date(d.date * 1000).toDateString();
         var cur_cap = ich.scrum_cap(d);
-        console.log(cur_cap);
         cap.html(cur_cap);
       })
     .on("mouseleave", function(d){
@@ -84,8 +83,10 @@ require(["eventcat"], function(cat) {
     $.each(data.rows, function(){
       if (this[1] !== "(not provided)") {
         var dict = {
+          url : this[2],
+          path : this[3],
           name : this[1],
-          count : this[2]
+          count : this[4]
         };
         var analytic = ich.analytic(dict);
         ana_container.append(analytic);

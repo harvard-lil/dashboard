@@ -26,7 +26,7 @@ class AnalyticsHandler(tornado.web.RequestHandler):
                 start_date='2012-01-01',
                 end_date='2013-05-02',
                 metrics='ga:visits',
-                dimensions='ga:source,ga:keyword',
+                dimensions='ga:source,ga:keyword,ga:hostname,ga:pagePath',
                 sort='-ga:visits',
                 filters='ga:medium==organic',
                 start_index='1',
