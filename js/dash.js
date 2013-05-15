@@ -94,8 +94,7 @@ require(["eventcat"], function(cat) {
     });
     var start_date = data.query['start-date'];
     var end_date = data.query['end-date'];
-    console.log(start_date);
-    console.log(end_date);
+    $("#ana_dates").html("Pageviews: " + start_date.substring(5) + " - " + end_date.substring(5));
   });
   $("#graph_wrapper").scrollLeft($("#scrum_graph").width());
 

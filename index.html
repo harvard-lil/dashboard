@@ -5,47 +5,57 @@
     <title>The Harvard Library Innovation Lab</title>
   </head>
   <body>
-    <div id="dashboard">
-    <div id="shoe_cam" class="mod cam">
-      <div id="graph_wrapper" class="">
-        <div id="scrum_graph" class="mod cam">
-        </div>
-      </div>
-      <div id="shoe_pic">
-      </div>
-      <img id="shoe_cam_image" alt="Shoes!">
-      <div id="caption">
-      </div>
- <!--     <img id="shoe_cam_image" src="img/shoe_cam.jpeg" alt="Shoes!"> -->
-    </div>
-      <div class="row">
-      	<div id="blog" class="mod">
-          <div id="title">
-            <h3>Blog</h3>
-          </div>
-          <div id="blog_rank" class="activity_box">
-          </div>
-        </div>
+    <div id="dashboard" class="container">
 
-        <div id="github-module" class="mod">
-          <div id="title">
-            <h3>Recent Activity</h3>
-          </div>
-          <div id="github-activity" class="activity_box">
-          </div>
-        </div>
-         <div id="analytics" class="mod">
-          <div id="title">
-            <h3>Analytics</h3>
-          </div>
-          <div id="analytic-activity" class="activity_box">
-          </div>
-        </div>
-      </div>
-    </div>
-   <!-- <div id="content">
-      PAGE CONTENT
-    </div> -->
+    	<div class="row">
+    		<div class="span9">
+    			<h1>Dashboard</h1>
+    		</div>
+    		<div class="span2">
+    			<img class="stamp" src="img/liblabstamp.png" alt="library lab stamp">
+    		</div>
+    	</div>
+    	<div class="row">
+    		<div id="shoe_cam" class="mod cam span12">
+      			<div id="graph_wrapper" class="">
+        			<div id="scrum_graph" class="mod cam">
+        			</div>
+      			</div>
+      			<div id="shoe_pic">
+      				<img id="shoe_cam_image" alt="Shoes!">
+    			</div>
+    			<div id="caption">
+      		</div>
+    		</div>
+
+    	</div> <!-- row-->
+      	<div class="row">
+      		<div id="blog" class="mod span4">
+          		<div id="title">
+            		<h3>Blog</h3>
+          		</div>
+          		<div id="blog_rank" class="activity_box">
+          		</div>
+        	</div>
+
+        	<div id="github-module" class="mod span4">
+          		<div id="title">
+            		<h3>Recent Activity</h3>
+          		</div>
+          		<div id="github-activity" class="activity_box">
+          		</div>
+        	</div>
+
+         	<div id="analytics" class="mod span4">
+          		<div id="title">
+            	  <h3 id="ana_dates">Pageviews:</h3>
+          		</div>
+          		<div id="analytic-activity" class="activity_box">
+          		</div>
+        	</div>
+      	</div>
+    	</div><!-- row-->
+    </div><!-- dashboard container-->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <script id="activity" class="mod" type="text/html">
